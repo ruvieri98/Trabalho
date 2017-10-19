@@ -22,11 +22,12 @@ namespace Estoque
             Endereco end = new Endereco();
             Telefone tel = new Telefone();
             tel.Ddd = 270;
+            tel.CodCidade = 1005;
             end.Bairro = "teste";
             Fornecedor teste = new Fornecedor(end,tel);
             Produto novo = new Produto(teste);
 
-            MessageBox.Show("o telefone do fornecedor é:"+novo.Fornecedor.Telefone.Ddd.ToString());
+            MessageBox.Show("o telefone do fornecedor é:"+novo.Fornecedor.Telefone.Ddd.ToString()+"codigo da cidade: "+novo.Fornecedor.Telefone.CodCidade.ToString());
         }
     }
 }
