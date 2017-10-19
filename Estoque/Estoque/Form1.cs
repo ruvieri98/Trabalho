@@ -20,14 +20,13 @@ namespace Estoque
         private void button1_Click(object sender, EventArgs e)
         {
             Endereco end = new Endereco();
+            Telefone tel = new Telefone();
+            tel.Ddd = 270;
             end.Bairro = "teste";
-            Cliente teste = new Cliente(end);
-            
-            //teste.Endereco = end;
-            
+            Fornecedor teste = new Fornecedor(end,tel);
+            //Produto novo = new Produto(teste);
 
-
-            MessageBox.Show(teste.Endereco.Bairro);
+            MessageBox.Show(teste.Endereco.Bairro+"\n"+teste.Telefone.Ddd.ToString());
         }
     }
 }

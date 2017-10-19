@@ -14,9 +14,10 @@ namespace Estoque
         public string Cpf { get => cpf; set => cpf = value; }
         public string Rg { get => rg; set => rg = value; }
 
-        public Cliente(Endereco endereco)
+        public Cliente(Endereco endereco, Telefone telefone)
         {
             this.endereco = endereco;
+            this.Telefone = telefone;
         }
 
     }

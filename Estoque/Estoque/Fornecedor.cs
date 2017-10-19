@@ -14,11 +14,10 @@ namespace Estoque
         public string Cnpj { get => cnpj; set => cnpj = value; }
         public string Nascimento { get => nascimento; set => nascimento = value; }
 
-        public Fornecedor()
+        public Fornecedor(Endereco endereco, Telefone telefone)
         {
-           
-           this.cnpj = "default";
-           this.Nascimento = "default";
+            this.endereco = endereco;
+            this.Telefone = telefone;
         }
 
 
