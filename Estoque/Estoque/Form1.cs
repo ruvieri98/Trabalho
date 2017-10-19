@@ -24,9 +24,9 @@ namespace Estoque
             tel.Ddd = 270;
             end.Bairro = "teste";
             Fornecedor teste = new Fornecedor(end,tel);
-            //Produto novo = new Produto(teste);
+            Produto novo = new Produto(teste);
 
-            MessageBox.Show(teste.Endereco.Bairro+"\n"+teste.Telefone.Ddd.ToString());
+            MessageBox.Show("o telefone do fornecedor é:"+novo.Fornecedor.Telefone.Ddd.ToString());
         }
     }
 }
