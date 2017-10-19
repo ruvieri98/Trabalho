@@ -16,5 +16,18 @@ namespace Estoque
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Endereco end = new Endereco();
+            end.Bairro = "teste";
+            Cliente teste = new Cliente(end);
+            
+            //teste.Endereco = end;
+            
+
+
+            MessageBox.Show(teste.Endereco.Bairro);
+        }
     }
 }

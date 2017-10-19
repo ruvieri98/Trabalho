@@ -11,13 +11,18 @@ namespace Estoque
         private string cnpj;
         private string nascimento;
 
-        protected Fornecedor()
+        public string Cnpj { get => cnpj; set => cnpj = value; }
+        public string Nascimento { get => nascimento; set => nascimento = value; }
+
+        public Fornecedor()
         {
-            cnpj = "default";
-            nascimento = "default";
+           
+           this.cnpj = "default";
+           this.Nascimento = "default";
         }
 
-       }
+
+    }
     }
 
   

@@ -6,19 +6,23 @@ using System.Threading.Tasks;
 
 namespace Estoque
 {
-     abstract class PessoaABS
+       abstract class PessoaABS
     {
-        private int codigo;
-        private string nome;
-        private string email;
+        protected int codigo;
+        protected string nome;
+        protected string email;
+        protected Endereco endereco;
 
 
-        protected PessoaABS()
-        {
-            codigo = 0;
-            nome = "default";
-            email = "dafault";
-        }
+        //Definindo propriedade Get e Set.
+        public int Codigo { get => codigo; set => codigo = value; }
+        public string Nome { get => nome; set => nome = value; }
+        public string Email { get => email; set => email = value; }
+        internal Endereco Endereco { get => endereco; set => endereco = value; }
+
+      
+
+
 
     }
 }
