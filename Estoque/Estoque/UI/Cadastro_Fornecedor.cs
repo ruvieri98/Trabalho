@@ -8,24 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Estoque
+namespace Estoque.UI
 {
-    public partial class Form1 : Form
+    public partial class Cadastro_Fornecedor : Form
     {
-        public Form1()
+        public Cadastro_Fornecedor()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void txb_nome_TextChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }
