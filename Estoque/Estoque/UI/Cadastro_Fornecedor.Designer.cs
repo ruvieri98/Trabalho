@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Cadastro_Fornecedor
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1027, 558);
+            this.Name = "Cadastro_Fornecedor";
             this.Text = "Cadastro_Fornecedor";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

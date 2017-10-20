@@ -15,6 +15,7 @@ namespace Estoque
         public Estoque_pricipal()
         {
             InitializeComponent();
+
         }
 
 
