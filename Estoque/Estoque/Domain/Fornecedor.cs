@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Estoque
 {
+    [Serializable]
     class Fornecedor:PessoaABS
     {
         private string cnpj;

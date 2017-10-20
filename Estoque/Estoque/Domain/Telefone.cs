@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Estoque
 {
+    [Serializable]
     class Telefone
     {
         private int codCidade;
@@ -18,4 +19,6 @@ namespace Estoque
         public string Tipo { get => tipo; set => tipo = value; }
         public string Telefoned { get => telefone; set => telefone = value; }
     }
+
+
 }

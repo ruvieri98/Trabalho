@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Estoque
 {
+    [Serializable]
     class Cliente : PessoaABS
     {
         private string cpf;
@@ -20,6 +21,17 @@ namespace Estoque
             this.Telefone = telefone;
         }
 
+        public Cliente SetName(string nome)
+        {
+            this.nome = nome;
 
+            return this;
+        }
+
+        public Cliente SetEmail(string email)
+        {
+            this.email = email;
+            return this;
+        }
     }
 }
