@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lbl_Sistema_Estoque_Principal = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_Sistema_Estoque_Principal
@@ -41,11 +42,22 @@
             this.lbl_Sistema_Estoque_Principal.TabIndex = 1;
             this.lbl_Sistema_Estoque_Principal.Text = "OPT ESTOQUE";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(149, 217);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Estoque_pricipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(895, 493);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_Sistema_Estoque_Principal);
             this.Name = "Estoque_pricipal";
             this.Text = "Sistema de Estoque";
@@ -57,6 +69,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_Sistema_Estoque_Principal;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -18,6 +18,20 @@ namespace Estoque
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
 
+            Arquivo arq = new Arquivo();
+            Endereco endereco = new Endereco();
+            Telefone tel = new Telefone();
+           
+            
+            Cliente clinete = new Cliente(endereco,tel);
+
+            clinete.Codigo = 55;
+            arq.WriteCliente(clinete);
+
+            
+        }
     }
 }
