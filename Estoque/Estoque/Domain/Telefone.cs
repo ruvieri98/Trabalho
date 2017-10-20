@@ -18,6 +18,33 @@ namespace Estoque
         public int Ddd { get => ddd; set => ddd = value; }
         public string Tipo { get => tipo; set => tipo = value; }
         public string Telefoned { get => telefone; set => telefone = value; }
+
+
+        public Telefone SetCodigoCidade(int codigocidade)
+        {
+            this.codCidade = codigocidade;
+            return this;
+        }
+
+        public Telefone SetDDD( int ddd)
+        {
+            this.ddd = ddd;
+            return this;
+        }
+
+        public Telefone SetTelefone(string telefone)
+        {
+            this.telefone = telefone;
+            return this;
+        }
+
+        public Telefone SetTipo(string tipo)
+        {
+            this.tipo = tipo;
+            return this;
+        }
+
+
     }
 
 

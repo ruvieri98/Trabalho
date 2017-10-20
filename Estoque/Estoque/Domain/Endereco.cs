@@ -24,5 +24,46 @@ namespace Estoque
         public string Complemento { get => complemento; set => complemento = value; }
         public int Numero { get => numero; set => numero = value; }
 
+
+        public Endereco SetBairro(string bairro)
+        {
+            this.bairro = bairro;
+
+            return this;
+        }
+
+        public Endereco SetCidade(string cidade)
+        {
+            this.cidade = cidade;
+            return this;
+        }
+
+        public Endereco SetCep(string cep)
+        {
+            this.cep = cep;
+            return this;
+        }
+
+        public Endereco SetRua(string rua)
+        {
+
+            this.rua = rua;
+            return this;
+        }
+
+        public Endereco SetComplemento(string complemento)
+        {
+            this.complemento = complemento;
+            return this;
+        }
+
+        public Endereco SetNumero(int numero)
+        {
+            this.numero = numero;
+            return this;
+        }
+
+
+
     }
 }
