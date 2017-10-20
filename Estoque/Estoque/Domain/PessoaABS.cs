@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Estoque
-{       //teste
+{      [Serializable]
+
        abstract class PessoaABS
     {
         protected int codigo;
@@ -21,6 +22,7 @@ namespace Estoque
         public string Email { get => email; set => email = value; }
         internal Telefone Telefone { get => telefone; set => telefone = value; }
         internal Endereco Endereco { get => endereco; set => endereco = value; }
+
 
     }
 }

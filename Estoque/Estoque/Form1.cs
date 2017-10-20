@@ -19,15 +19,19 @@ namespace Estoque
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Endereco end = new Endereco();
-            Telefone tel = new Telefone();
-            tel.Ddd = 270;
-            tel.CodCidade = 1005;
-            end.Bairro = "teste";
-            Fornecedor teste = new Fornecedor(end,tel);
-            Produto novo = new Produto(teste);
 
-            MessageBox.Show("o telefone do fornecedor é:"+novo.Fornecedor.Telefone.Ddd.ToString()+"codigo da cidade: "+novo.Fornecedor.Telefone.CodCidade.ToString());
+            Telefone T = new Telefone();
+            Endereco C = new Endereco();
+            Fornecedor B = new Fornecedor(C,T);
+            Produto A = new Produto(B);
+            A.Nome = txb_nome.Text;
+            MessageBox.Show("nome do produto:" + A.Nome);
+
+        }
+
+        private void txb_nome_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

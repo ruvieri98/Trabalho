@@ -20,5 +20,6 @@ namespace Estoque
             this.Telefone = telefone;
         }
 
+
     }
 }
