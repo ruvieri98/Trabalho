@@ -27,11 +27,11 @@ namespace Estoque
 
             Fornecedor produto = new Fornecedor(endereco, tel);
             Cliente clinete = new Cliente(endereco,tel);
+            clinete.Codigo = 9999;
 
-            listafornecedor = arq.ReadArquivo();
+            arq.WriteArquivo(clinete);
 
-            endereco = listafornecedor[1];
-            MessageBox.Show(endereco.Rua);
+
         }
     }
 }

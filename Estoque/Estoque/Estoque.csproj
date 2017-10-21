@@ -48,6 +48,7 @@
     <Compile Include="App\Arquivo.cs" />
     <Compile Include="Domain\Cliente.cs" />
     <Compile Include="Domain\Endereco.cs" />
+    <Compile Include="Service\ServiceVenda.cs" />
     <Compile Include="UI\Cadastro_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
