@@ -24,12 +24,13 @@ namespace Estoque
             Arquivo arq = new Arquivo();
             Endereco endereco = new Endereco();
             Telefone tel = new Telefone();
-           
-            
-            Cliente clinete = new Cliente(endereco,tel);
 
+            Fornecedor produto = new Fornecedor(endereco, tel);
+            Cliente clinete = new Cliente(endereco,tel);
+            produto.Email = "joaopaulogabarrao@gmail.com";
             clinete.Codigo = 55;
-            arq.WriteCliente(clinete);
+            arq.WriteArquivo(produto);
+            arq.WriteArquivo(clinete);
 
             
         }
