@@ -20,19 +20,18 @@ namespace Estoque
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            List<Endereco> listafornecedor = new List<Endereco>();
             Arquivo arq = new Arquivo();
             Endereco endereco = new Endereco();
             Telefone tel = new Telefone();
 
             Fornecedor produto = new Fornecedor(endereco, tel);
             Cliente clinete = new Cliente(endereco,tel);
-            produto.Email = "joaopaulogabarrao@gmail.com";
-            clinete.Codigo = 55;
-            arq.WriteArquivo(produto);
-            arq.WriteArquivo(clinete);
 
-            
+            listafornecedor = arq.ReadArquivo();
+
+            endereco = listafornecedor[1];
+            MessageBox.Show(endereco.Rua);
         }
     }
 }
