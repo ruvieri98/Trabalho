@@ -20,6 +20,10 @@ namespace Estoque
             this.endereco = endereco;
             this.Telefone = telefone;
         }
+        public Cliente()
+        {
+
+        }
 
         public Cliente SetName(string nome)
         {

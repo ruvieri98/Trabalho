@@ -32,6 +32,11 @@ namespace Estoque
             this.fornecedor = fornecedor;
         }
 
+        public Produto()
+        {
+
+        }
+
     }
 
 
