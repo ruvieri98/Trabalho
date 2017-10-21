@@ -13,7 +13,7 @@ namespace Estoque
         StreamReader sr;
 
         public void WriteCliente(Cliente cliente)
-        {
+        {   //teste
             sw = File.CreateText(@"cliente.txt");
             sw.WriteLine(cliente.Codigo);
             sw.Close();
