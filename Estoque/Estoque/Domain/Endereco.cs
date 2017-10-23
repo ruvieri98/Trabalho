@@ -15,6 +15,7 @@ namespace Estoque
         private string rua;
         private string complemento;
         private int numero;
+        
 
 
         public string Bairro { get => bairro; set => bairro = value; }

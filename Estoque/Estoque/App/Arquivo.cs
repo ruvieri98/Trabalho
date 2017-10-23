@@ -16,6 +16,7 @@ namespace Estoque
         {
             sw = File.CreateText(@"cliente.txt");
             sw.WriteLine(cliente.Codigo);
+
             sw.Close();
         }
     }

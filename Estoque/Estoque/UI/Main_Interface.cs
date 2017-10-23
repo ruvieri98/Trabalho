@@ -20,18 +20,36 @@ namespace Estoque
 
         private void button1_Click(object sender, EventArgs e)
         {
+  
+
+
+            //Arquivo arq = new Arquivo();
+            //Endereco endereco = new Endereco();
+            //Telefone tel = new Telefone();
+
+            Telefone telefone = new Telefone();
+            Endereco end = new Endereco();
+            Fornecedor elemento = new Fornecedor(end,telefone);
+            Cliente cliente = new Cliente(end,telefone);
+
+            cliente.Codigo = 666;
 
             Arquivo arq = new Arquivo();
-            Endereco endereco = new Endereco();
-            Telefone tel = new Telefone();
-           
-            
-            Cliente clinete = new Cliente(endereco,tel);
 
-            clinete.Codigo = 55;
-            arq.WriteCliente(clinete);
+            arq.WriteCliente(cliente);
+            //Cliente clinete = new Cliente(endereco,tel);
+
+            //clinete.Codigo = 55;
+            //arq.WriteCliente(clinete);
+
 
             
+        }
+
+        private void pToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cadastro_Cliente cliente = new Cadastro_Cliente();
+            cliente.Show();
         }
     }
 }
