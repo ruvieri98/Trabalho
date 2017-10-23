@@ -4,65 +4,105 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Estoque
 {
     class Arquivo
     {
-        StreamWriter sw;
-        StreamReader sr;
+        FileStream sw;
+        FileStream sr;
         private string linha;
-        private string DiretorioCliente = @"cliente.txt";
-        private string DiretorioFornecedor = @"fornecedor.txt";
-        private string DiretorioProduto = @"produto.txt";
+        private string DiretorioCliente = @"cliente.jp";
+        private string DiretorioFornecedor = @"fornecedor.jp";
+        private string DiretorioProduto = @"produto.jp";
 
 
+        //escreve o arquivo de cliente
         public void WriteArquivo(Cliente cliente)
-        {   //teste
-            sw = File.CreateText(DiretorioCliente);
-            
-            sw.WriteLine(cliente.Codigo);
-            sw.Close();
+        {
+            try
+            { 
+                if (File.Exists(DiretorioCliente) == true)
+                {
+
+                    FileStream ClienteFile = new FileStream(DiretorioCliente, FileMode.Append);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(ClienteFile, cliente);
+                    ClienteFile.Close();
+                }
+                else
+                {
+                    FileStream ClienteFile = new FileStream(DiretorioCliente, FileMode.Create);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(ClienteFile, cliente);
+                    ClienteFile.Close();
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Falha ao abrir o arqivo");
+            }
+
         }
 
+        //escreve o arquivo de fornecedor
         public void WriteArquivo(Fornecedor fornecedor)
         {
-            if(File.Exists(DiretorioFornecedor) == true)
+            try
             {
-                
-                sw = File.AppendText(DiretorioFornecedor);
-                sw.WriteLine(fornecedor.Email);
-                sw.Close();
-            }
-            else
-            {
-                sw = File.CreateText(DiretorioFornecedor);
-                sw.WriteLine(fornecedor.Email);
-                sw.Close();
-            }
+                if (File.Exists(DiretorioFornecedor) == true)
+                {
 
+                    FileStream FornecedorFile = new FileStream(DiretorioFornecedor, FileMode.Append);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(FornecedorFile, fornecedor);
+                    FornecedorFile.Close();
+                }
+                else
+                {
+                    FileStream FornecedorFile = new FileStream(DiretorioFornecedor, FileMode.Create);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(FornecedorFile, fornecedor);
+                    FornecedorFile.Close();
+                }
+            }
+            catch
+            {
+                Console.WriteLine("falha ao abrir o arquivo");
+            }
         }
 
-        public List<Endereco> ReadArquivo()
+        //escreve o arquivo produto
+        public void WriteArquivo(Produto produto)
         {
-            
-                List<Endereco> load = new List<Endereco>();
-            
-                sr = File.OpenText(DiretorioFornecedor);
+            try
+            {
+                if (File.Exists(DiretorioProduto) == true)
+                {
 
-                 while((linha = sr.ReadLine()) != null)
-                 {
-                    Endereco endereco = new Endereco();
-                    //linha = sr.ReadLine();
-                    endereco.Rua = sr.ReadLine();
-                    
-                    
-                    load.Add(endereco);
-                 }
-
-            return load;
+                    FileStream produtoFile = new FileStream(DiretorioProduto, FileMode.Append);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(produtoFile, produto);
+                    produtoFile.Close();
+                }
+                else
+                {
+                    FileStream produtoFile = new FileStream(DiretorioProduto, FileMode.Create);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(produtoFile, produto);
+                    produtoFile.Close();
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Falha ao abrir o arquivo");
+            }
         }
+
+
+
+
     }
 }
 
