@@ -19,7 +19,7 @@ namespace Estoque
 
 
         //escreve o arquivo de cliente
-        public void WriteArquivo(object cliente)
+        public void WriteArquivo(Cliente cliente)
         {
             try
             {
@@ -44,6 +44,11 @@ namespace Estoque
                 Console.WriteLine("Falha ao abrir o arqivo");
             }
 
+        }
+
+        internal List<Cliente> ReadArquivo()
+        {
+            throw new NotImplementedException();
         }
 
         //escreve o arquivo de fornecedor
@@ -100,43 +105,102 @@ namespace Estoque
             }
         }
 
-        public List<Cliente> ReadArquivo()
+        public List<Cliente> ReadArquivoCliente()
         {
             FileInfo fi = new FileInfo(DiretorioCliente);
             List<Cliente> lista = new List<Cliente>();
             FileStream arq = new FileStream(DiretorioCliente, FileMode.Open);
             BinaryFormatter bf = new BinaryFormatter();
-            ;
             try
             {
                 if (fi.Exists == true)
                 {
-                    long teste = arq.Length;
-                    //Cliente novo = (Cliente)bf.Deserialize(arq);
-                    while (arq.Length >= teste)
+                    while (true)
                     {
                         Cliente novo = new Cliente();
                         novo = (Cliente)bf.Deserialize(arq);
                         lista.Add(novo);
-
                     }
-                    arq.Close();
-
-                    return lista;
                 }
                 else
                 {
                     return null;
                 }
             }
-            catch(Exception)
+            catch 
             {
-                arq.Close();
                 return lista;
             }
-
+            finally
+            {
+                arq.Close();
+            }
         }
 
+        public List<Produto> ReadArquivoProduto()
+        {
+            FileInfo fi = new FileInfo(DiretorioProduto);
+            List<Produto> lista = new List<Produto>();
+            FileStream arq = new FileStream(DiretorioProduto, FileMode.Open);
+            BinaryFormatter bf = new BinaryFormatter();
+            try
+            {
+                if (fi.Exists == true)
+                {
+                    while (true)
+                    {
+                        Produto novo = new Produto();
+                        novo = (Produto)bf.Deserialize(arq);
+                        lista.Add(novo);
+                    }
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                return lista;
+            }
+            finally
+            {
+                arq.Close();
+            }
+        }
+
+        public List<Fornecedor> ReadArquivoFornecedor()
+        {
+            FileInfo fi = new FileInfo(DiretorioFornecedor);
+            List<Fornecedor> lista = new List<Fornecedor>();
+            FileStream arq = new FileStream(DiretorioFornecedor, FileMode.Open);
+            BinaryFormatter bf = new BinaryFormatter();
+            try
+            {
+                if (fi.Exists == true)
+                {
+                    while (true)
+                    {
+                        Fornecedor novo = new Fornecedor();
+                        novo = (Fornecedor)bf.Deserialize(arq);
+                        lista.Add(novo);
+
+                    }
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                return lista;
+            }
+            finally
+            {
+                arq.Close();
+            }
+        }
 
 
     }

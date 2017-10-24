@@ -24,17 +24,15 @@ namespace Estoque
         private void button1_Click(object sender, EventArgs e)
         {
             Arquivo arq = new Arquivo();
-            Cliente novo = new Cliente();
 
-            novo.Nome = "paulo";
-            novo.Rg = "9514";
-            arq.WriteArquivo(novo);
-            List<Cliente> lista = arq.ReadArquivo();
-            int cont = lista.Count();
+            
 
-            MessageBox.Show("seu nome é : "+lista[].Nome+"temos "+ cont.ToString());
+            List<Cliente> lista = arq.ReadArquivocliente();
 
-
+            foreach(Cliente cliente in lista)
+            {
+                MessageBox.Show(cliente.Nome);
+            }
         }
     }
 }
