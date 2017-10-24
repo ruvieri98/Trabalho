@@ -27,7 +27,7 @@ namespace Estoque
 
             
 
-            List<Cliente> lista = arq.ReadArquivocliente();
+            List<Cliente> lista = arq.ReadArquivoCliente();
 
             foreach(Cliente cliente in lista)
             {
