@@ -19,10 +19,10 @@ namespace Estoque
 
 
         //escreve o arquivo de cliente
-        public void WriteArquivo(Cliente cliente)
+        public void WriteArquivo(object cliente)
         {
             try
-            { 
+            {
                 if (File.Exists(DiretorioCliente) == true)
                 {
 
@@ -100,6 +100,42 @@ namespace Estoque
             }
         }
 
+        public List<Cliente> ReadArquivo()
+        {
+            FileInfo fi = new FileInfo(DiretorioCliente);
+            List<Cliente> lista = new List<Cliente>();
+            FileStream arq = new FileStream(DiretorioCliente, FileMode.Open);
+            BinaryFormatter bf = new BinaryFormatter();
+            ;
+            try
+            {
+                if (fi.Exists == true)
+                {
+                    long teste = arq.Length;
+                    //Cliente novo = (Cliente)bf.Deserialize(arq);
+                    while (arq.Length >= teste)
+                    {
+                        Cliente novo = new Cliente();
+                        novo = (Cliente)bf.Deserialize(arq);
+                        lista.Add(novo);
+
+                    }
+                    arq.Close();
+
+                    return lista;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch(Exception)
+            {
+                arq.Close();
+                return lista;
+            }
+
+        }
 
 
 

@@ -26,12 +26,13 @@ namespace Estoque
             Arquivo arq = new Arquivo();
             Cliente novo = new Cliente();
 
-            novo.Nome = "kamuddasdsa";
-            novo.Rg = "3217dfasdfsdfsda7159";
-
+            novo.Nome = "paulo";
+            novo.Rg = "9514";
             arq.WriteArquivo(novo);
+            List<Cliente> lista = arq.ReadArquivo();
+            int cont = lista.Count();
 
-            MessageBox.Show("cliente salvo com sucesso.");
+            MessageBox.Show("seu nome é : "+lista[].Nome+"temos "+ cont.ToString());
 
 
         }
