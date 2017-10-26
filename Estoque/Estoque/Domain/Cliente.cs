@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace Estoque
 {
     [Serializable]
+
+    
     class Cliente : PessoaABS
     {
         private string cpf;
@@ -36,6 +38,11 @@ namespace Estoque
         {
             this.email = email;
             return this;
+        }
+
+        public override string ToString()
+        {
+            return this.Nome;
         }
     }
 }
