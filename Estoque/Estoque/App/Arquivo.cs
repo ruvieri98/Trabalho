@@ -16,7 +16,7 @@ namespace Estoque
         private string DiretorioProduto = @"produto.jp";
 
 
-        //escreve o arquivo de cliente
+        //escreve o arquivo de cliente, criando no diretorio padrao.
         public void WriteArquivo(Cliente cliente)
         {
             try
@@ -42,6 +42,14 @@ namespace Estoque
                 Console.WriteLine("Falha ao abrir o arqivo");
             }
 
+        }
+
+        public void WriteArquivo(List<Cliente> clientes)
+        {
+            foreach(Cliente client in clientes)
+            {
+                WriteArquivo(client);
+            }
         }
 
         internal List<Cliente> ReadArquivo()
@@ -102,7 +110,7 @@ namespace Estoque
                 Console.WriteLine("Falha ao abrir o arquivo");
             }
         }
-
+        
         public List<Cliente> ReadArquivoCliente()
         {
             FileInfo fi = new FileInfo(DiretorioCliente);
@@ -182,7 +190,6 @@ namespace Estoque
                         Fornecedor novo = new Fornecedor();
                         novo = (Fornecedor)bf.Deserialize(arq);
                         lista.Add(novo);
-
                     }
                 }
                 else

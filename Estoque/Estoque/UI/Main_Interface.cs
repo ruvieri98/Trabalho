@@ -14,11 +14,12 @@ namespace Estoque
     public partial class Estoque_pricipal : Form
     {
         private List<Cliente> _ListaCliente = new List<Cliente>();
+        ServiceCliente servico = new ServiceCliente();
 
         public Estoque_pricipal()
         {
             InitializeComponent();
-
+            
             Arquivo arq = new Arquivo();
             _ListaCliente = arq.ReadArquivoCliente();
 
@@ -30,10 +31,27 @@ namespace Estoque
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Cliente cliente = (Cliente)cmb_cliente.SelectedItem;
-            MessageBox.Show("Nome" + cliente.Nome +
-                "\nEmal:" + cliente.Email);
-;
+
+            //Cliente cliente = (Cliente)cmb_cliente.SelectedItem;
+            //MessageBox.Show("Nome" + cliente.Nome +
+            //    "\nEmal:" + cliente.Email);
+            Cliente buscado = new Cliente();
+
+            try
+            {
+                _ListaCliente = servico.DelCliente("joao", _ListaCliente);
+
+                foreach(Cliente lista in _ListaCliente)
+                {
+                    MessageBox.Show(lista.ToString());
+                }
+                
+            }
+            catch
+            {
+                MessageBox.Show("Pessoa não encontrada.");
+            }
+            
         }
 
 
