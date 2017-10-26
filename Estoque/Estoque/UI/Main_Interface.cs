@@ -24,21 +24,16 @@ namespace Estoque
 
             foreach (Cliente cliente in _ListaCliente)
             {
-                cmb_cliente.Items.Add(cliente.ToString());
+                cmb_cliente.Items.Add(cliente);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            
-            //Arquivo escreve = new Arquivo();
-            //Cliente novo = new Cliente();
-            //novo.Nome = "opt";
-            //novo.Email = "opt@gmial.com";
-            //novo.Rg = "7159951";
-
-            //escreve.WriteArquivo(novo);
+            Cliente cliente = (Cliente)cmb_cliente.SelectedItem;
+            MessageBox.Show("Nome" + cliente.Nome +
+                "\nEmal:" + cliente.Email);
+;
         }
 
 
