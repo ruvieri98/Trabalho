@@ -15,52 +15,39 @@ namespace Estoque
     {
         private List<Cliente> _ListaCliente = new List<Cliente>();
         ServiceCliente servico = new ServiceCliente();
+        Arquivo arq = new Arquivo();
 
         public Estoque_pricipal()
         {
             InitializeComponent();
-            
-            Arquivo arq = new Arquivo();
+            List<Cliente> _Lista_Cliente = new List<Cliente>();
             _ListaCliente = arq.ReadArquivoCliente();
 
-            foreach (Cliente cliente in _ListaCliente)
+            foreach(Cliente cliente in _ListaCliente)
             {
-                cmb_cliente.Items.Add(cliente);
+                Cmb_Cliente.Items.Add(cliente);
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Create_Client_Click(object sender, EventArgs e)
+        {
+            Cliente novo = new Cliente();
+
+            novo.Nome = "kamu";
+            novo.Rg = "123456";
+            arq.WriteArquivo(novo);
+        }
+
+        private void Cmb_Cliente_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            //Cliente cliente = (Cliente)cmb_cliente.SelectedItem;
-            //MessageBox.Show("Nome" + cliente.Nome +
-            //    "\nEmal:" + cliente.Email);
-            Cliente buscado = new Cliente();
-
-            try
-            {
-                _ListaCliente = servico.DelCliente("joao", _ListaCliente);
-
-                foreach(Cliente lista in _ListaCliente)
-                {
-                    MessageBox.Show(lista.ToString());
-                }
-                
-            }
-            catch
-            {
-                MessageBox.Show("Pessoa não encontrada.");
-            }
-            
         }
 
-
-        private void cmb_cliente_SelectedIndexChanged(object sender, EventArgs e)
+        private void Del_Client_Click(object sender, EventArgs e)
         {
-            
+            ServiceCliente Service_Client = new ServiceCliente();
 
+            Service_Client.DelCliente("kamu", _ListaCliente);
         }
-
-
     }
 }

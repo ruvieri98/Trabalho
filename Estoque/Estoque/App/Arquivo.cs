@@ -46,10 +46,21 @@ namespace Estoque
 
         public void WriteArquivo(List<Cliente> clientes)
         {
-            foreach(Cliente client in clientes)
+            File.Delete(@"C:\Users\joao3\source\repos\Trabalho\Estoque\Estoque\bin\Debug\cliente.jp");
+            FileStream ClienteFile = new FileStream(DiretorioCliente, FileMode.Append);
+            BinaryFormatter bf = new BinaryFormatter();
+
+            try
             {
-                WriteArquivo(client);
+                foreach (Cliente client in clientes)
+                {
+
+                    bf.Serialize(ClienteFile, client);
+
+                }
             }
+            catch { Console.WriteLine("Impossivel abrir o arquivo"); }
+            finally { ClienteFile.Close(); }
         }
 
         internal List<Cliente> ReadArquivo()
@@ -110,7 +121,7 @@ namespace Estoque
                 Console.WriteLine("Falha ao abrir o arquivo");
             }
         }
-        
+
         public List<Cliente> ReadArquivoCliente()
         {
             FileInfo fi = new FileInfo(DiretorioCliente);
@@ -133,7 +144,7 @@ namespace Estoque
                     return null;
                 }
             }
-            catch 
+            catch
             {
                 return lista;
             }

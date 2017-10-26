@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.lbl_Sistema_Estoque_Principal = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cmb_cliente = new System.Windows.Forms.ComboBox();
+            this.Create_Client = new System.Windows.Forms.Button();
+            this.Del_Client = new System.Windows.Forms.Button();
+            this.Search_Client = new System.Windows.Forms.Button();
+            this.Cmb_Cliente = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lbl_Sistema_Estoque_Principal
@@ -44,40 +45,53 @@
             this.lbl_Sistema_Estoque_Principal.TabIndex = 1;
             this.lbl_Sistema_Estoque_Principal.Text = "OPT ESTOQUE";
             // 
-            // button1
+            // Create_Client
             // 
-            this.button1.Location = new System.Drawing.Point(149, 217);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Create_Client.Location = new System.Drawing.Point(40, 338);
+            this.Create_Client.Name = "Create_Client";
+            this.Create_Client.Size = new System.Drawing.Size(119, 79);
+            this.Create_Client.TabIndex = 2;
+            this.Create_Client.Text = "Criar Cliente";
+            this.Create_Client.UseVisualStyleBackColor = true;
+            this.Create_Client.Click += new System.EventHandler(this.Create_Client_Click);
             // 
-            // textBox1
+            // Del_Client
             // 
-            this.textBox1.Location = new System.Drawing.Point(319, 218);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
+            this.Del_Client.Location = new System.Drawing.Point(305, 338);
+            this.Del_Client.Name = "Del_Client";
+            this.Del_Client.Size = new System.Drawing.Size(116, 79);
+            this.Del_Client.TabIndex = 3;
+            this.Del_Client.Text = "Deleta Cliente";
+            this.Del_Client.UseVisualStyleBackColor = true;
+            this.Del_Client.Click += new System.EventHandler(this.Del_Client_Click);
             // 
-            // cmb_cliente
+            // Search_Client
             // 
-            this.cmb_cliente.FormattingEnabled = true;
-            this.cmb_cliente.Location = new System.Drawing.Point(573, 216);
-            this.cmb_cliente.Name = "cmb_cliente";
-            this.cmb_cliente.Size = new System.Drawing.Size(121, 24);
-            this.cmb_cliente.TabIndex = 5;
-            this.cmb_cliente.SelectedIndexChanged += new System.EventHandler(this.cmb_cliente_SelectedIndexChanged);
+            this.Search_Client.Location = new System.Drawing.Point(612, 338);
+            this.Search_Client.Name = "Search_Client";
+            this.Search_Client.Size = new System.Drawing.Size(124, 79);
+            this.Search_Client.TabIndex = 4;
+            this.Search_Client.Text = "Procurar Cliente";
+            this.Search_Client.UseVisualStyleBackColor = true;
+            // 
+            // Cmb_Cliente
+            // 
+            this.Cmb_Cliente.FormattingEnabled = true;
+            this.Cmb_Cliente.Location = new System.Drawing.Point(225, 85);
+            this.Cmb_Cliente.Name = "Cmb_Cliente";
+            this.Cmb_Cliente.Size = new System.Drawing.Size(215, 24);
+            this.Cmb_Cliente.TabIndex = 5;
+            this.Cmb_Cliente.SelectedIndexChanged += new System.EventHandler(this.Cmb_Cliente_SelectedIndexChanged);
             // 
             // Estoque_pricipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(895, 493);
-            this.Controls.Add(this.cmb_cliente);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Cmb_Cliente);
+            this.Controls.Add(this.Search_Client);
+            this.Controls.Add(this.Del_Client);
+            this.Controls.Add(this.Create_Client);
             this.Controls.Add(this.lbl_Sistema_Estoque_Principal);
             this.Name = "Estoque_pricipal";
             this.Text = "Sistema de Estoque";
@@ -89,9 +103,10 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_Sistema_Estoque_Principal;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox cmb_cliente;
+        private System.Windows.Forms.Button Create_Client;
+        private System.Windows.Forms.Button Del_Client;
+        private System.Windows.Forms.Button Search_Client;
+        private System.Windows.Forms.ComboBox Cmb_Cliente;
     }
 }
 
