@@ -49,5 +49,16 @@ namespace Estoque
 
             Service_Client.DelCliente("kamu", _ListaCliente);
         }
+
+        private void Search_Client_Click(object sender, EventArgs e)
+        {
+
+            Cliente client = (Cliente)Cmb_Cliente.SelectedItem;
+
+            MessageBox.Show("Nome:" + client.Nome +
+                "\nRG:" + client.Rg);
+
+
+        }
     }
 }

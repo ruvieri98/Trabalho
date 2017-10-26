@@ -73,6 +73,7 @@
             this.Search_Client.TabIndex = 4;
             this.Search_Client.Text = "Procurar Cliente";
             this.Search_Client.UseVisualStyleBackColor = true;
+            this.Search_Client.Click += new System.EventHandler(this.Search_Client_Click);
             // 
             // Cmb_Cliente
             // 
