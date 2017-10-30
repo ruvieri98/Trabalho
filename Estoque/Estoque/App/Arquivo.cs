@@ -63,10 +63,6 @@ namespace Estoque
             finally { ClienteFile.Close(); }
         }
 
-        internal List<Cliente> ReadArquivo()
-        {
-            throw new NotImplementedException();
-        }
 
         //escreve o arquivo de fornecedor
         public void WriteArquivo(Fornecedor fornecedor)

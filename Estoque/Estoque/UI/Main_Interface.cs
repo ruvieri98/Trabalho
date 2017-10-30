@@ -22,7 +22,6 @@ namespace Estoque
             InitializeComponent();
             List<Cliente> _Lista_Cliente = new List<Cliente>();
             _ListaCliente = arq.ReadArquivoCliente();
-
             foreach(Cliente cliente in _ListaCliente)
             {
                 Cmb_Cliente.Items.Add(cliente);
@@ -47,7 +46,9 @@ namespace Estoque
         {
             ServiceCliente Service_Client = new ServiceCliente();
 
-            Service_Client.DelCliente("kamu", _ListaCliente);
+
+            _ListaCliente = Service_Client.DelCliente(Cmb_Cliente.SelectedItem.ToString(), _ListaCliente);
+
         }
 
         private void Search_Client_Click(object sender, EventArgs e)
