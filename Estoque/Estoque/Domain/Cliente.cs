@@ -11,6 +11,7 @@ namespace Estoque
     
     class Cliente : PessoaABS
     {
+        //
         private string cpf;
         private string rg;
 
