@@ -17,7 +17,7 @@ namespace Estoque.App
 
         public void AbrirArquivo(string diretorio)
         {
-
+            //teste.com
             File.Delete(diretorio);
             arquivo = new FileStream(diretorio, FileMode.Append);
 
