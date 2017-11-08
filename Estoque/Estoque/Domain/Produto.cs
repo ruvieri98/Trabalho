@@ -14,7 +14,7 @@ namespace Estoque
         private float preco;
         private string descricao;
         private string codigo;
-        private string data;
+        private DateTime data;
         private Fornecedor fornecedor;
 
 
@@ -22,9 +22,8 @@ namespace Estoque
         public float Preco { get => preco; set => preco = value; }
         public string Descricao { get => descricao; set => descricao = value; }
         public string Codigo { get => codigo; set => codigo = value; }
-        public string Data { get => data; set => data = value; }
         internal Fornecedor Fornecedor { get => fornecedor; set => fornecedor = value; }
-
+        public DateTime Data { get => data; set => data = value; }
 
         public Produto(Fornecedor fornecedor)
         {

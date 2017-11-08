@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\AcessoArq.cs" />
     <Compile Include="App\Arquivo.cs" />
     <Compile Include="Domain\Cliente.cs" />
     <Compile Include="Domain\Endereco.cs" />

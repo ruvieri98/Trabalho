@@ -128,7 +128,7 @@ namespace Estoque
             {
                 if (fi.Exists == true)
                 {
-                    while (true)
+                    while (arq.Position < arq.Length)
                     {
                         Cliente novo = new Cliente();
                         novo = (Cliente)bf.Deserialize(arq);
@@ -137,17 +137,18 @@ namespace Estoque
                 }
                 else
                 {
-                    return null;
+                    lista = null;
                 }
             }
             catch
             {
-                return lista;
+                lista = null;
             }
             finally
             {
                 arq.Close();
             }
+            return lista;
         }
 
         public List<Produto> ReadArquivoProduto()
@@ -160,12 +161,13 @@ namespace Estoque
             {
                 if (fi.Exists == true)
                 {
-                    while (true)
+                    while (arq.CanRead)
                     {
                         Produto novo = new Produto();
                         novo = (Produto)bf.Deserialize(arq);
                         lista.Add(novo);
                     }
+                    return lista;
                 }
                 else
                 {
@@ -174,7 +176,7 @@ namespace Estoque
             }
             catch
             {
-                return lista;
+                return null;
             }
             finally
             {
@@ -213,7 +215,6 @@ namespace Estoque
                 arq.Close();
             }
         }
-
 
     }
 }

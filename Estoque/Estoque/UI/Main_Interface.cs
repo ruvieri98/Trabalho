@@ -32,7 +32,7 @@ namespace Estoque
         {
             Cliente novo = new Cliente();
 
-            novo.Nome = "kamu";
+            novo.Nome = "kael";
             novo.Rg = "123456";
             arq.WriteArquivo(novo);
         }
@@ -59,6 +59,11 @@ namespace Estoque
             MessageBox.Show("Nome:" + client.Nome +
                 "\nRG:" + client.Rg);
 
+
+        }
+
+        private void Estoque_pricipal_Load(object sender, EventArgs e)
+        {
 
         }
     }

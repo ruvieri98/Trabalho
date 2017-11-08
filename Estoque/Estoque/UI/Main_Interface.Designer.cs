@@ -96,6 +96,7 @@
             this.Controls.Add(this.lbl_Sistema_Estoque_Principal);
             this.Name = "Estoque_pricipal";
             this.Text = "Sistema de Estoque";
+            this.Load += new System.EventHandler(this.Estoque_pricipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
