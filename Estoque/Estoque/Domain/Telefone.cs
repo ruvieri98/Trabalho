@@ -11,13 +11,13 @@ namespace Estoque
     {
         private int codCidade;
         private int ddd;
-        private string telefone;
+        private int telefone;
         private string tipo;
 
         public int CodCidade { get => codCidade; set => codCidade = value; }
         public int Ddd { get => ddd; set => ddd = value; }
         public string Tipo { get => tipo; set => tipo = value; }
-        public string Telefoned { get => telefone; set => telefone = value; }
+        public int Telefoned { get => telefone; set => telefone = value; }
 
 
         public Telefone SetCodigoCidade(int codigocidade)
@@ -32,7 +32,7 @@ namespace Estoque
             return this;
         }
 
-        public Telefone SetTelefone(string telefone)
+        public Telefone SetTelefone(int telefone)
         {
             this.telefone = telefone;
             return this;

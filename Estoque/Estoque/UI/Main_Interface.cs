@@ -24,6 +24,10 @@ namespace Estoque
 
         }
 
-
+        private void fornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new Cadastro_Fornecedor();
+            formulario.Show();
+        }
     }
 }
