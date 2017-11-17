@@ -35,5 +35,11 @@ namespace Estoque
             Form formulario_produto = new Cadastro_Produto();
             formulario_produto.Show();
         }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario_cliente = new Cadastro_Cliente();
+            formulario_cliente.Show();
+        }
     }
 }

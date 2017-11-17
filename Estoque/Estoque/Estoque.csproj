@@ -84,6 +84,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\Telefone.cs" />
+    <EmbeddedResource Include="UI\Cadastro_Cliente.resx">
+      <DependentUpon>Cadastro_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Cadastro_Fornecedor.resx">
       <DependentUpon>Cadastro_Fornecedor.cs</DependentUpon>
     </EmbeddedResource>

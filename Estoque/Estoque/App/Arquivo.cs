@@ -195,7 +195,7 @@ namespace Estoque
             {
                 if (fi.Exists == true)
                 {
-                    while (true)
+                    while (arq.Position < arq.Length)
                     {
                         Fornecedor novo = new Fornecedor();
                         novo = (Fornecedor)bf.Deserialize(arq);
@@ -209,12 +209,13 @@ namespace Estoque
             }
             catch
             {
-                return lista;
+                return null;
             }
             finally
             {
                 arq.Close();
             }
+            return lista;
         }
 
     }

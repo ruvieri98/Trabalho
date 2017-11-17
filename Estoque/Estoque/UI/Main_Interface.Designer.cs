@@ -87,6 +87,7 @@
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.clienteToolStripMenuItem.Text = "Cliente";
+            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // produtoToolStripMenuItem
             // 
@@ -108,19 +109,19 @@
             // estoqueToolStripMenuItem1
             // 
             this.estoqueToolStripMenuItem1.Name = "estoqueToolStripMenuItem1";
-            this.estoqueToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+            this.estoqueToolStripMenuItem1.Size = new System.Drawing.Size(137, 26);
             this.estoqueToolStripMenuItem1.Text = "Estoque";
             // 
             // entradaToolStripMenuItem
             // 
             this.entradaToolStripMenuItem.Name = "entradaToolStripMenuItem";
-            this.entradaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.entradaToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.entradaToolStripMenuItem.Text = "Entrada";
             // 
             // saidaToolStripMenuItem
             // 
             this.saidaToolStripMenuItem.Name = "saidaToolStripMenuItem";
-            this.saidaToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.saidaToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.saidaToolStripMenuItem.Text = "Saida";
             // 
             // Estoque_pricipal

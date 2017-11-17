@@ -12,6 +12,7 @@ namespace Estoque
         
         protected string nome;
         protected string email;
+        private string nascimento;
         protected Endereco endereco;
         protected Telefone telefone;
 
@@ -21,7 +22,6 @@ namespace Estoque
         public string Email { get => email; set => email = value; }
         internal Telefone Telefone { get => telefone; set => telefone = value; }
         internal Endereco Endereco { get => endereco; set => endereco = value; }
-
-
+        public string Nascimento { get => nascimento; set => nascimento = value; }
     }
 }

@@ -27,7 +27,6 @@ namespace Estoque
 
         public Produto(Fornecedor fornecedor)
         {
-
             this.fornecedor = fornecedor;
         }
 
@@ -42,6 +41,4 @@ namespace Estoque
         }
 
     }
-
-
 }

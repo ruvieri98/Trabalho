@@ -10,10 +10,10 @@ namespace Estoque
     class Fornecedor:PessoaABS
     {
         private string cnpj;
-        private string nascimento;
+       
 
         public string Cnpj { get => cnpj; set => cnpj = value; }
-        public string Nascimento { get => nascimento; set => nascimento = value; }
+        public string Nascimento { get => Nascimento; set => Nascimento = value; }
 
         public Fornecedor(Endereco endereco, Telefone telefone)
         {
