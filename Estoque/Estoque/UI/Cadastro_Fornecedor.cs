@@ -12,7 +12,7 @@ namespace Estoque
 {
     public partial class Cadastro_Fornecedor : Form
     {
-
+        private Arquivo arq = new Arquivo();
         private Telefone telefone = new Telefone();
         private Endereco endereco = new Endereco();
         private Fornecedor fornecedor = new Fornecedor();
@@ -139,8 +139,6 @@ namespace Estoque
         {
             if (ValidarCampos() == 1)
             {
-                Arquivo arq = new Arquivo();
-
                 PreencheDados();
                 arq.WriteArquivo(fornecedor);
                 MessageBox.Show("Fornecedor Cadastrado com Sucesso.");

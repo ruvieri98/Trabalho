@@ -25,6 +25,13 @@ namespace Estoque
 
         }
 
+        public override string ToString()
+        {
+            return this.Nome;
+        }
+
+
+
 
     }
     }

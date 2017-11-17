@@ -87,6 +87,9 @@
     <EmbeddedResource Include="UI\Cadastro_Fornecedor.resx">
       <DependentUpon>Cadastro_Fornecedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cadastro_Produto.resx">
+      <DependentUpon>Cadastro_Produto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Main_Interface.resx">
       <DependentUpon>Main_Interface.cs</DependentUpon>
     </EmbeddedResource>

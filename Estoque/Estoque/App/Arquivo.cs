@@ -161,13 +161,13 @@ namespace Estoque
             {
                 if (fi.Exists == true)
                 {
-                    while (arq.CanRead)
+                    while (arq.Position < arq.Length)
                     {
                         Produto novo = new Produto();
                         novo = (Produto)bf.Deserialize(arq);
                         lista.Add(novo);
                     }
-                    return lista;
+                    
                 }
                 else
                 {
@@ -182,6 +182,7 @@ namespace Estoque
             {
                 arq.Close();
             }
+            return lista;
         }
 
         public List<Fornecedor> ReadArquivoFornecedor()
