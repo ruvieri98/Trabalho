@@ -132,15 +132,20 @@ namespace Estoque
             fornecedor.Nome = txb_nomeFornecedor.Text;
             fornecedor.Email = txb_emailFornecedor.Text;
             fornecedor.Nascimento = mask_dataFornecedor.Text;
-            fornecedor.Cnpj = Convert.ToInt32(mask_cnjpFornecedor.Text);
+            fornecedor.Cnpj = mask_cnjpFornecedor.Text;
         }
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
             if (ValidarCampos() == 1)
             {
+                Arquivo arq = new Arquivo();
+
                 PreencheDados();
-            }        
+                arq.WriteArquivo(fornecedor);
+                MessageBox.Show("Fornecedor Cadastrado com Sucesso.");
+            }
+            else { MessageBox.Show("Ops...Algo deu errado."); }
         }
     }
 }
