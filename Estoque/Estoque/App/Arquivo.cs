@@ -10,7 +10,6 @@ namespace Estoque
 {
     class Arquivo
     {
-
         private string DiretorioCliente = @"cliente.jp";
         private string DiretorioFornecedor = @"fornecedor.jp";
         private string DiretorioProduto = @"produto.jp";
