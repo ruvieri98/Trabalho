@@ -13,7 +13,7 @@ namespace Estoque
        
 
         public string Cnpj { get => cnpj; set => cnpj = value; }
-        public string Nascimento { get => Nascimento; set => Nascimento = value; }
+        //public string Nascimento { get => Nascimento; set => Nascimento = value; }
 
         public Fornecedor(Endereco endereco, Telefone telefone)
         {

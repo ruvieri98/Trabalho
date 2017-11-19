@@ -8,5 +8,8 @@ namespace Estoque.Domain
 {
     class EntradaEstoque
     {
+        private Produto prod;
+
+
     }
 }
